@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mohammad Jahidul Islam Tushar - GIS & Remote Sensing Specialist</title>
+    <meta name="description" content="Deputy GIS Specialist | Spatial Analysis, Remote Sensing, Geospatial Data Management, UAV Photogrammetry | Dhaka, Bangladesh"/>
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #006ba6;
+            --primary-dark: #004a87;
+            --primary-light: #0096c7;
+            --accent: #00b4d8;
+            --dark: #0d1b2a;
+            --gray: #495057;
+            --light: #f8f9fa;
+            --bg: #f5f9fc;
+            --text: #2d3436;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+        }
+        h1, h2, h3, h4, h5, .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        .navbar {
+            background-color: var(--dark);
+            padding: 1.25rem 0;
+            transition: all 0.4s ease;
+        }
+        .navbar.scrolled {
+            background-color: rgba(13, 27, 42, 0.96);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+        .nav-link {
+            color: #ced4da !important;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white;
+            padding: 180px 0 140px;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 140px;
+            background: linear-gradient(to bottom, transparent, var(--bg));
+        }
+        .profile-img {
+            width: 240px;          /* made larger */
+            height: 240px;
+            object-fit: cover;
+            border: 8px solid rgba(255,255,255,0.95);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.45);
+            transition: all 0.4s ease;
+            margin-top: -40px;     /* lifts image higher – creates overlap with navbar */
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.07) rotate(2deg);
+        }
+        
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 991px) {
+            .profile-img {
+                width: 200px;
+                height: 200px;
+                margin-top: -30px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .profile-img {
+                width: 170px;
+                height: 170px;
+                margin-top: -20px;
+            }
+        }
+        .section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            color: var(--dark);
+            margin-bottom: 2.8rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 3px;
+        }
+        .card {
+            border: none;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.09);
+            transition: all 0.4s ease;
+            background: white;
+        }
+        .card:hover {
+            transform: translateY(-14px);
+            box-shadow: 0 28px 60px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+            color: white;
+            font-weight: 600;
+            padding: 1.4rem 1.6rem;
+            border-radius: 14px 14px 0 0;
+        }
+        .skill-icon {
+            color: var(--accent);
+            font-size: 1.6rem;
+            margin-right: 14px;
+        }
+        .btn-download {
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border: none;
+            padding: 14px 40px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.35s ease;
+        }
+        .btn-download:hover {
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            transform: translateY(-4px);
+            box-shadow: 0 14px 35px rgba(0, 180, 216, 0.4);
+        }
+        .list-unstyled li {
+            margin-bottom: 0.9rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+        .list-unstyled li::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .list-group-item {
+            border: none;
+            background: transparent;
+            padding: 0.75rem 0;
+        }
+        footer {
+            background: var(--dark);
+            color: #adb5bd;
+            padding: 80px 0 40px;
+        }
+        footer a {
+            color: #e9ecef;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: var(--accent);
+        }
+        .contact-info i {
+            color: var(--accent);
+            width: 30px;
+            text-align: center;
+        }
+
+        
+
+        /* Featured Work / Gallery styles - Consistent & Future-Proof Grid */
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            transition: all 0.45s ease;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .gallery-card .gallery-img-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 75%;                   /* 4:3 aspect ratio – change to 56.25% for wider (16:9) */
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .gallery-card .gallery-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.65) 40%, transparent 100%);
+            color: white;
+            padding: 1.4rem 1.25rem 1.25rem;
+            transition: all 0.4s ease;
+            min-height: 110px;
+        }
+
+        .gallery-title {
+            font-size: 1.24rem;
+            font-weight: 700;
+            line-height: 1.38;
+            margin: 0 0 0.6rem 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Make grid items stretch cards to equal height */
+        .row.g-4 > div {
+            display: flex;
+        }
+
+        .row.g-4 > div .gallery-card {
+            flex: 1;
+        }
+
+        @media (max-width: 991px) {
+            .hero { padding: 160px 0 120px; }
+            .profile-img { width: 170px; height: 170px; }
+        }
+        @media (max-width: 767px) {
+            .hero { padding: 140px 0 100px; }
+            .profile-img { width: 150px; height: 150px; }
+            .section-title { font-size: 2.2rem; }
+        }
+
+
+
+                /* Featured Work Animated Heading */
+        .featured-heading {
+            margin-bottom: 3rem;
+        }
+        
+        .featured-line {
+            font-family: 'Playfair Display', serif;
+            opacity: 0;
+            transform: translateX(80px);
+            transition: all 1s ease;
+        }
+        
+        .left-line {
+            text-align: left;
+            font-size: 2.8rem;
+            transform: translateX(-100px);
+        }
+        
+        .right-line {
+            text-align: right;
+            font-size: 1.2rem;
+            max-width: 720px;
+            margin-left: auto;
+            color: var(--gray);
+        }
+        
+        .featured-line.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+
+        /* Horizontal Video Carousel */
+        .video-carousel-wrapper {
+            position: relative;
+        }
+        
+        .video-carousel {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+            scrollbar-width: thin; /* Firefox */
+        }
+        
+        .video-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .video-carousel::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .video-carousel::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .video-card h5 {
+            font-size: 1.05rem;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+
+
+
+        .gallery-wrapper {
+            position: relative;
+        }
+        
+        .gallery-scroll {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
+        
+        .gallery-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .gallery-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .gallery-item {
+            width: 280px;
+            cursor: pointer;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            transition: all 0.35s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.06);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+        }
+
+
+        .pdf-preview-wrapper {
+            position: relative;
+            padding-top: 80%;           /* adjust ratio – 80% ≈ good for PDFs */
+            overflow: hidden;
+            background: #f1f3f5;
+        }
+        
+        .pdf-preview-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+
+
+                .video-carousel-wrapper {
+            position: relative;
+        }
+        
+        .video-carousel {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
+        
+        .video-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .video-carousel::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .video-carousel::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .video-card h5 {
+            font-size: 1.05rem;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+
+
+        /* Make navbar menu more compact - prevents wrapping */
+        .navbar-nav .nav-link {
+            font-size: 0.94rem;           /* slightly smaller */
+            padding: 0.5rem 0.75rem;      /* less horizontal padding */
+            white-space: nowrap;          /* prevent word wrap inside links */
+        }
+        
+        .navbar-nav {
+            flex-wrap: nowrap;            /* force single line */
+        }
+        
+        /* On very small screens, still collapse normally */
+        @media (max-width: 991px) {
+            .navbar-nav {
+                flex-wrap: wrap;
+            }
+        }        
+        
+        
+        
+        
+        
+        /* === Field Work Section Styling === */
+        .main-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        .main-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 40%, transparent 100%);
+            color: white;
+            padding: 1.8rem 1.5rem 1.3rem;
+            text-align: center;
+        }
+        .overlay-text {
+            margin: 0;
+            font-size: 1.18rem;
+            font-weight: 500;
+            line-height: 1.45;
+        }
+        
+        /* Horizontal scrollable gallery for smaller images */
+        .gallery-scroll-wrapper {
+            position: relative;
+        }
+        .gallery-scroll {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) #f1f1f1;
+        }
+        .gallery-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        .gallery-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        .gallery-item {
+            width: 260px;
+            flex-shrink: 0;
+        }
+        .gallery-img.small {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            transition: all 0.35s ease;
+        }
+        .gallery-img.small:hover {
+            transform: scale(1.06);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+        }
+
+
+
+
+    /* Better mobile experience for field work section */
+    @media (max-width: 767px) {
+        .main-image-wrapper img {
+            height: 50vh;               /* limit height so it doesn't take too much vertical space */
+            object-fit: cover;
+        }
+        
+        .overlay-text {
+            font-size: 1rem;            /* slightly smaller text on small screens */
+            padding: 1rem 0.8rem;
+        }
+        
+        .gallery-item {
+            width: 220px;               /* slightly smaller thumbnails on mobile */
+        }
+        
+        .gallery-img.small {
+            height: 140px;              /* shorter height for mobile */
+        }
+    }
+
+        
+
+
+
+
+
+
+        /* === Compact Timeline Experience Section === */
+        .timeline-container {
+            position: relative;
+            padding: 1.5rem 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.25rem;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border: 4px solid white;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(0,107,166,0.15);
+        }
+        
+        .timeline-content {
+            margin-left: 50px;
+            border-left: 3px solid #dee2e6;
+            padding-left: 1.5rem;
+        }
+        
+        .card-header {
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+        }
+        
+        .card-header:hover {
+            background: var(--primary-dark) !important;
+        }
+        
+        .card-body ul li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .card-body ul li::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .timeline-dot {
+                left: 12px;
+            }
+            .timeline-content {
+                margin-left: 40px;
+            }
+        }
+        
+        /* === Hero GIS/RS Theme Background === */
+        .hero {
+            background: #0d1b2a; /* fallback dark color */
+            min-height: 100vh;
+            padding: 180px 0 140px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('GIS and RS_Experience_Collage/cover_photo.jpg') center/cover no-repeat; /* ← upload your background image here */
+            opacity: 0.25; /* semi-transparent */
+            z-index: 0;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,107,166,0.35) 0%, rgba(0,180,216,0.25) 100%);
+            /* Optional subtle grid pattern */
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        
+        .profile-img {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border: 8px solid rgba(255,255,255,0.95);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.45);
+            margin-top: -40px;
+            z-index: 1;
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .hero { padding: 160px 0 120px; }
+            .profile-img { width: 200px; height: 200px; margin-top: -30px; }
+        }
+        
+        @media (max-width: 767px) {
+            .hero { padding: 140px 0 100px; }
+            .profile-img { width: 170px; height: 170px; margin-top: -20px; }
+            .overlay-text { font-size: 1rem; }
+        }
+
+
+
+
+
+                /* === Key Stats Bar === */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            position: relative;
+        }
+        
+        .stat-item {
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255,255,255,0.18);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.18);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-item small {
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .stat-item {
+                padding: 1.2rem 0.8rem;
+            }
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+        }
+
+
+
+
+
+
+                /* === Hero Slideshow Background === */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: #0d1b2a; /* fallback color */
+        }
+        
+        .hero-slideshow {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        
+        .slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 0.35; /* semi-transparent so text remains readable */
+        }
+        
+        /* Overlay to make text pop more */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 27, 42, 0.55); /* dark overlay */
+            z-index: 1;
+        }
+        
+        /* Your existing content stays above */
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+
+
+
+        /* === Modern Navbar Link Hover Effect === */
+        .navbar-nav .nav-link {
+            position: relative;
+            padding-bottom: 6px !important;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2.5px;
+            bottom: 0;
+            left: 50%;
+            background: var(--accent);           /* #00b4d8 */
+            transition: all 0.35s ease;
+            border-radius: 2px;
+            transform: translateX(-50%);
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 70%;                          /* you can change to 85%–100% */
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+
+
+                /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 30px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            background-color: #20b858;
+        }
+        
+        .whatsapp-float i {
+            margin-top: 3px; /* small adjustment for perfect centering */
+        }
+        
+        /* Pulse animation (optional - subtle attention grabber) */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        .whatsapp-float {
+            animation: pulse 2s infinite;
+        }
+
+
+
+
+                /* Publication Poster Styling */
+        .poster-preview {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: #f8f9fa;
+        }
+        
+        .poster-preview:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+        }
+        
+        .poster-preview img {
+            transition: transform 0.45s ease;
+        }
+        
+        .poster-preview:hover img {
+            transform: scale(1.09);
+        }
+                
+        
+    </style>
+</head>
+<body>
+<!-- Navigation - Clean, no wrapping, all sections visible -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <!-- Empty brand area to maximize space for menu -->
+        <a class="navbar-brand fw-bold fs-4" href="#"></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">           <!-- changed from ms-auto to mx-auto -->
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
+                <li class="nav-item"><a class="nav-link" href="#demos">Demos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tutorials">Tutorials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fieldwork">Field Work</a></li>
+                <li class="nav-item"><a class="nav-link" href="#storymaps">Story Maps</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mapbook">Mapbook</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#trainings">Trainings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero with Slideshow Background -->
+<section class="hero text-center position-relative overflow-hidden">
+    <!-- Slideshow container -->
+    <div class="hero-slideshow">
+        <div class="slide active" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (1).png');"></div>
+        <div class="slide" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (2).jpg');"></div>
+        <div class="slide" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (3).png');"></div>
+        <div class="slide" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (4).png');"></div>
+        <div class="slide" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (5).png');"></div>
+        <div class="slide" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (6).png');"></div>
+        <div class="slide" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (7).jpg');"></div>
+        <div class="slide" style="background-image: url('GIS and RS_Experience_Collage/Cover_Photos/Cover_Photo (8).png');"></div>
+
+        
+        <!-- Add more images here if you want (5-8 is ideal) -->
+        <!-- <div class="slide" style="background-image: url('images/hero-gis-5.jpg');"></div> -->
+    </div>
+
+    <!-- Dark overlay to make text readable -->
+    <div class="hero-overlay"></div>
+
+    <!-- Your existing content – stays on top -->
+    <div class="container position-relative z-1">
+        <img src="GIS and RS_Experience_Collage/5_Professional Photo.jpeg" 
+             alt="Mohammad Jahidul Islam Tushar" 
+             class="rounded-circle profile-img mb-4 shadow-lg">
+        
+        <h1 class="display-3 fw-bold mb-2 mt-3 text-white text-shadow">Mohammad Jahidul Islam Tushar</h1>
+        <h3 class="fw-light mb-4 text-white text-shadow">Deputy GIS Specialist | Spatial Analysis & Remote Sensing</h3>
+        
+        <p class="lead mb-4 text-white text-shadow">
+            <i class="fas fa-map-marker-alt me-2"></i> Dhaka, Bangladesh
+        </p>
+        
+        <p class="mb-5 fs-5 contact-info text-white text-shadow">
+            <i class="fas fa-phone me-2"></i> +880 1521-108306<br>
+            <i class="fas fa-envelope me-2"></i> jahidhtushar448@gmail.com<br>
+            <i class="fab fa-linkedin me-2"></i>
+            <a href="https://www.linkedin.com/in/jahid-tushar1996" class="text-white text-decoration-none">linkedin.com/in/jahid-tushar1996</a>
+        </p>
+        
+        <a href="documents/CV_Mohammad_Jahidul_Islam_Tushar.pdf" download 
+           class="btn btn-download btn-lg mt-2">
+            <i class="fas fa-file-arrow-down me-2"></i> Download Full CV
+        </a>
+    </div>
+</section>
+
+
+
+<!-- Key Stats / Metrics Bar -->
+<section class="stats-bar py-5 bg-gradient-primary text-white">
+    <div class="container">
+        <div class="row text-center g-4">
+
+            <!-- Stat 1: Trained Participants -->
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold mb-1">150+</h3>
+                    <p class="mb-0">Participants Trained</p>
+                    <small class="opacity-75">In nationwide GIS/RS sessions</small>
+                </div>
+            </div>
+
+            <!-- Stat 2: Rework Reduction -->
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold mb-1">35%</h3>
+                    <p class="mb-0">Rework Reduction</p>
+                    <small class="opacity-75">Through QA/QC processes</small>
+                </div>
+            </div>
+
+            <!-- Stat 3: Field Reports Tracked -->
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold mb-1">700+</h3>
+                    <p class="mb-0">Field Reports Tracked</p>
+                    <small class="opacity-75">Via mobile data systems</small>
+                </div>
+            </div>
+
+            <!-- Stat 4: Enrollment Increase -->
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3 class="fw-bold mb-1">50%</h3>
+                    <p class="mb-0">Enrollment Increase</p>
+                    <small class="opacity-75">In GIS courses via marketing</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Professional Summary -->
+<section id="about" class="section bg-white">
+    <div class="container">
+        <h2 class="section-title text-center">Professional Summary</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <p class="lead text-center">
+                    Results-driven GIS and Remote Sensing specialist with extensive experience in spatial analysis, data visualization, and policy research. Proven ability to lead teams, manage complex projects, and deliver high-quality geospatial solutions under tight deadlines. Skilled in advanced mapping, spatial modeling, and quality control, with a track record of enhancing operational efficiency, such as training data collectors for the National Rabies Control Program to improve field data accuracy. Passionate about capitalizing on geospatial technologies for impactful development initiatives, combining technical expertise with strategic research and innovation to drive measurable outcomes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Work -->
+<section id="featured" class="section bg-light">
+    <div class="container">
+    <div class="featured-heading mb-5">
+        <h2 class="featured-line left-line">Featured Work</h2>
+        <p class="featured-line right-line">
+            Selected examples of advanced geospatial analysis, mapping, and visualization projects
+        </p>
+    </div>
+
+
+        <!-- Gallery Grid -->
+        <div class="row g-4">
+            
+            <!-- Project 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Advanced Analysis.jpg"
+                     data-title="Advanced Spatial Analysis & Modeling"
+                     data-desc="Multi-source data integration, change detection, LULC classification, and geospatial modeling using satellite imagery and UAV-derived products.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Advanced Analysis.jpg"
+                             alt="Advanced Geospatial Analysis"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Advanced Spatial Analysis & Modeling</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Study Area Mapping with advance analysis and INTERACTIVE Diagram.jpg"
+                     data-title="Geospatial Analysis of Bangladesh: Environment, Health & Urban Insights"
+                     data-desc="An advanced GIS portfolio on Bangladesh and Dhaka, covering land cover change, COVID-19 hotspot analysis, flood risk modeling, and historical mapping. It highlights expertise in spatial analysis, geostatistics, and integrated GIS workflows for environmental and urban planning.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Study Area Mapping with advance analysis and INTERACTIVE Diagram.jpg"
+                             alt="Study Area Mapping with advance analysis and INTERACTIVE Diagram"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Geospatial Analysis of Bangladesh: Environment, Health & Urban Insights</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Image Classification.jpg"
+                     data-title="Urban Evolution Unveiled: Multi-Decade Land Use & Land Cover Transformation in Dhaka Metropolitan City (1972–2019)"
+                     data-desc="A comprehensive supervised classification and change detection analysis using Landsat imagery, illustrating dramatic shifts from vegetation and barren land to rapid settlement expansion in Dhaka City Corporation (DCC) areas, highlighting urbanization trends and environmental impacts over nearly five decades.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Image Classification.jpg"
+                             alt="Advanced Geospatial Analysis"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Urban Evolution Unveiled: Multi-Decade Land Use & Land Cover Transformation in Dhaka Metropolitan City (1972–2019)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Digitizng.jpg"
+                     data-title="Precision Cartography in Action: Georeferencing, Digitization, and Advanced Map Composition Using ArcMap"
+                     data-desc="Step-by-step demonstration of professional GIS workflows, including georeferencing raster images, digitizing administrative boundaries (e.g., Upazila maps), creating layered layouts with legends, scale bars, and north arrows, and visualizing complex features like Sundarban compartments and range offices.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Digitizng.jpg"
+                             alt="Advanced Geospatial Analysis"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Precision Cartography in Action: Georeferencing, Digitization, and Advanced Map Composition Using ArcMap</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Attractive Map 2.jpg"
+                     data-title="From Global Perspectives to Local Insights: Satellite-Derived Maps and Multi-Scale Geospatial Visualizations"
+                     data-desc="Stunning integration of night-time lights, high-resolution satellite imagery, and thematic overlays depicting urban extents, river networks, and regional connectivity across Bangladesh, South Asia, and comparative global/Dhaka city views.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Attractive Map 2.jpg"
+                             alt="Advanced Geospatial Analysis"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">From Global Perspectives to Local Insights: Satellite-Derived Maps and Multi-Scale Geospatial Visualizations</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Collecting Geolocatoions SOP.jpg"
+                     data-title="Seamless Geospatial Data Processing: Geocoding, Coordinate Conversion, and 3D Terrain Exploration in Google Earth Pro"
+                     data-desc="Advanced techniques for handling large datasets in Excel (find/replace, decimal degree formatting), importing coordinates into Google Earth Pro, configuring 3D views, terrain exaggeration, and historical imagery comparison for precise location-based analysis and visualization.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Collecting Geolocatoions SOP.jpg"
+                             alt="Advanced Geospatial Analysis"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Seamless Geospatial Data Processing: Geocoding, Coordinate Conversion, and 3D Terrain Exploration in Google Earth Pro</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Attractive Map.jpg"
+                     data-title="Demographic & Health Insights Through GIS: 60+ Population Density and COVID-19 Case Distribution in Dhaka & Bangladesh"
+                     data-desc="Kernel density heat maps and point-based visualizations revealing vulnerable elderly populations (60+ age group) and confirmed COVID-19 cases across administrative units in Dhaka Metropolitan City (DMC) and nationwide, using HDX and social media-sourced data for public health decision support.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Attractive Map.jpg"
+                             alt="Advanced Geospatial Analysis"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Demographic & Health Insights Through GIS: 60+ Population Density and COVID-19 Case Distribution in Dhaka & Bangladesh</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="gallery-card" data-bs-toggle="modal" data-bs-target="#projectModal"
+                     data-img="GIS and RS_Experience_Collage/Logo Poster Banner.jpg"
+                     data-title="Building Geospatial Excellence: Designing Live Training, ArcGIS Mastery Courses & Global Learner Impact Posters"
+                     data-desc="Collage of instructor-led live sessions, course highlights (ArcMap, ArcGIS Pro, Python/ArcPy, Web GIS), certification offers, international awards, and student testimonials, showcasing journey in delivering high-quality, accessible GIS education to learners in 180+ countries.">
+                    <div class="gallery-img-wrapper">
+                        <img src="GIS and RS_Experience_Collage/Logo Poster Banner.jpg"
+                             alt="Advanced Geospatial Analysis"
+                             class="gallery-img">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Building Geospatial Excellence: Designing Live Training, ArcGIS Mastery Courses & Global Learner Impact Posters</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Project Image" class="img-fluid mb-4" style="max-height: 70vh; object-fit: contain;">
+                <h4 id="modalTitle" class="mb-3"></h4>
+                <p id="modalDesc" class="lead text-muted"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+<!-- GIS & RS Tutorials -->
+<section id="tutorials" class="section bg-white">
+    <div class="container">
+        <h2 class="section-title text-center">GIS & Remote Sensing Tutorials</h2>
+        <p class="text-center lead mb-5">Practical video tutorials on ArcGIS, Remote Sensing, Python scripting, and geospatial analysis</p>
+
+        <!-- Horizontal scrollable video carousel -->
+        <div class="video-carousel-wrapper mt-4">
+            <div class="video-carousel d-flex flex-nowrap overflow-auto pb-4 gap-4">
+                
+                <!-- Video 1 -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dVpZOpElBHc"
+                            title="Multispectral vs Hyperspectral Images"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Multispectral vs Hyperspectral Images</h5>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/Z7_ueqBDQkI"
+                            title="Applications of GIS in Daily Life"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Applications of GIS in Daily Life</h5>
+                </div>
+
+                <!-- New Video 3 -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/_Y7s3LocS-U"
+                            title="Coordinate Systems in GIS & Remote Sensing"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Coordinate Systems in GIS & Remote Sensing</h5>
+                </div>
+
+                <!-- New Video 4 -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/7tnbF8ywZZE"
+                            title="How to make lucrative GIS map using road network layer"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">How to make lucrative GIS map using road network layer</h5>
+                </div>
+
+                <!-- New Video 5 -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/wXVK69TxXEA"
+                            title="Spatial Data Types in GIS"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Spatial Data Types in GIS</h5>
+                </div>
+
+                <!-- New Video 6 -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.youtube.com/embed/8yg08_piUKQ"
+                            title="Efficient Geocoding in ArcMap"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Efficient Geocoding in ArcMap: Manual vs Automatic</h5>
+                </div>
+
+                <!-- You can keep adding more .video-card blocks here -->
+
+            </div>
+        </div>
+
+        <!-- Watch more button -->
+        <div class="text-center mt-5">
+            <a href="https://www.youtube.com/@georc" target="_blank" class="btn btn-primary btn-lg">
+                <i class="fab fa-youtube me-2"></i> Watch More on YouTube
+            </a>
+        </div>
+    </div>
+</section>
+    
+<!-- Core Competencies -->
+<section id="skills" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Core Competencies</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center">
+                        <i class="fas fa-map skill-icon"></i> GIS & Remote Sensing
+                    </div>
+                    <div class="card-body">
+                        ArcGIS, ArcGIS Pro, QGIS, ERDAS Imagine, ENVI, IDRISI Selva, Google Earth Pro
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center">
+                        <i class="fas fa-drone skill-icon"></i> UAV & Photogrammetry
+                    </div>
+                    <div class="card-body">
+                        Pix4D, Agisoft Metashape, Orthophoto generation, Point cloud processing, DEM/DSM creation
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center">
+                        <i class="fas fa-chart-area skill-icon"></i> Spatial Analysis & Modeling
+                    </div>
+                    <div class="card-body">
+                        Cartographic design, Geospatial modeling, LULC classification, Change detection, Spatial & non-spatial analysis
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center">
+                        <i class="fas fa-code skill-icon"></i> Automation & Programming
+                    </div>
+                    <div class="card-body">
+                        Basic Python, Script Adaptation & Automation (AI-assisted), Batch Processing
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center">
+                        <i class="fas fa-database skill-icon"></i> Data Management
+                    </div>
+                    <div class="card-body">
+                        Spatial databases, Data quality control (QA/QC), Data analytics, Multi-source data integration
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header text-center">
+                        <i class="fas fa-chart-pie skill-icon"></i> Visualization & Reporting
+                    </div>
+                    <div class="card-body">
+                        Tableau, SPSS, Adobe Illustrator, Adobe Photoshop, MS Office
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Practical Demonstrations - Screen Recordings -->
+<section id="demos" class="section bg-white">
+    <div class="container">
+        <h2 class="section-title text-center">Practical Demonstrations – GIS & Remote Sensing Workflows</h2>
+        <p class="text-center lead mb-5">
+            A collection of screen-recorded demonstrations showcasing real-world GIS/RS workflows, 
+            client projects, university assignments, personal research, and tool explorations — 
+            from data preparation to advanced analysis and visualization.
+        </p>
+
+        <!-- Horizontal scrollable video carousel -->
+        <div class="video-carousel-wrapper mt-4">
+            <div class="video-carousel d-flex flex-nowrap overflow-auto pb-4 gap-4">
+
+                <!-- 1. Time Series Animation - COVID-19 -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/730746508?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">COVID-19 Time Series Animation</h5>
+                </div>
+
+                <!-- 2. ArcGIS Online Interface -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/773712136?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Exploring ArcGIS Online Interface</h5>
+                </div>
+
+                <!-- 3. Hot Spot Analysis -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/787188216?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Hot Spot Analysis Demonstration</h5>
+                </div>
+
+                <!-- 4. Client Project - Remote Sensing & GIS -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/756643196?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Client Project – Remote Sensing & GIS Workflow</h5>
+                </div>
+
+                <!-- 5. OSM Interface -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/748640642?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">OpenStreetMap – Interface, Sharing & Editing</h5>
+                </div>
+
+                <!-- 6. Geo Check Screen Video -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/1109424728?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Georeferencing & Quality Check Workflow</h5>
+                </div>
+
+                <!-- 7. GEE SRTM Slope & Statistics -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/786782340?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Google Earth Engine – SRTM Slope & Zonal Statistics</h5>
+                </div>
+
+                <!-- 8. Landscape Transformation -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/784533122?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Landscape Change Detection Using Satellite Imagery</h5>
+                </div>
+
+                <!-- 9. Referencing Work -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/760724881?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Map Referencing & Georeferencing Techniques</h5>
+                </div>
+
+                <!-- 10. Downloading Satellite Images -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/764269872?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Downloading & Preprocessing Satellite Imagery (MSc Project)</h5>
+                </div>
+
+                <!-- 11. Earthquake Vulnerability -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/739259670?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Earthquake Vulnerability Mapping Project</h5>
+                </div>
+
+                <!-- 12. ERDAS Image Processing -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/735884067?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">ERDAS – Subset, Classification & NDVI Analysis</h5>
+                </div>
+
+                <!-- 13. COVID-19 Animated Documentation -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/732735121?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">COVID-19 Spread – Animated Documentation</h5>
+                </div>
+
+                <!-- 14. WordPress Website Update -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/732539052?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">WordPress Website Content & Update Demo</h5>
+                </div>
+
+                <!-- 15. Excel to Map -->
+                <div class="video-card flex-shrink-0" style="width: 360px;">
+                    <div class="ratio ratio-16x9 rounded shadow mb-3">
+                        <iframe src="https://player.vimeo.com/video/730693108?badge=0&autopause=0&player_id=0&app_id=58479"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Converting Excel Data to Interactive Maps</h5>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="text-muted">
+                These recordings capture real workflows from academic, freelance, client, and personal projects.
+            </p>
+            <a href="https://vimeo.com/user121930049">
+                <i class="fab fa-vimeo-v me-2"></i> View More on Vimeo
+            </a>
+        </div>
+    </div>
+</section>
+    
+
+
+
+    
+<!-- Professional Experience – Compact Timeline / Accordion -->
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title text-center">Professional Experience</h2>
+        <p class="text-center text-muted mb-5">
+            Chronological overview of roles and key responsibilities
+        </p>
+
+        <div class="timeline-container mt-4">
+
+            <!-- 1. Deputy GIS Specialist -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content card border-0 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-gradient-primary text-white p-3" 
+                         data-bs-toggle="collapse" data-bs-target="#exp1" aria-expanded="true" aria-controls="exp1">
+                        <div>
+                            <h5 class="mb-0">Deputy GIS Specialist</h5>
+                            <small>Sheltech Consultants (Pvt.) Ltd. • Dhaka, Bangladesh</small>
+                        </div>
+                        <small class="text-white-75">Dec 2024 – Present | Full-time</small>
+                    </div>
+                    <div id="exp1" class="collapse show">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li>Managed digitization QA/QC for mouza mapping and spatial databases, maintaining 90–95% data integrity, positional accuracy, and project compliance.</li>
+                                <li>Performed QC verification on geo-referencing, edge-matching, topology validation, and attribute accuracy for 2000+ map sheets using satellite and drone imagery, achieving <5% error rates and reducing rework by ≈35%.</li>
+                                <li>Coordinated quality assurance and updates for land-use/land-cover databases by validating and integrating multi-source satellite datasets for accurate land zoning outcomes.</li>
+                                <li>Developed Python scripts for automated QC validation, error detection, and batch processing (AI-assisted), improving QA efficiency by 30–40% and shortening database finalization timelines.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. GIS Data Quality Manager -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content card border-0 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-gradient-primary text-white p-3" 
+                         data-bs-toggle="collapse" data-bs-target="#exp2" aria-expanded="false">
+                        <div>
+                            <h5 class="mb-0">GIS Data Quality Manager</h5>
+                            <small>Institute of Water Modelling (IWM) • Dhaka, Bangladesh</small>
+                        </div>
+                        <small class="text-white-75">Feb 2023 – Nov 2024 | Full-time</small>
+                    </div>
+                    <div id="exp2" class="collapse">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li>Led teams of 15+ including the cartographic team, printing, digitization units, ensuring spatial accuracy and consistency across Dhaka and Barishal Division with <7% error rate.</li>
+                                <li>Conducted rigorous QA/QC and validation of digitized maps and GIS databases, achieving 85-90% overall data accuracy and preventing costly rework in project.</li>
+                                <li>Implemented geospatial modeling and automation scripting solutions, streamlining workflows and boosting team operational efficiency by ∼25%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. GIS Expert -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content card border-0 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-gradient-primary text-white p-3" 
+                         data-bs-toggle="collapse" data-bs-target="#exp3" aria-expanded="false">
+                        <div>
+                            <h5 class="mb-0">GIS Expert</h5>
+                            <small>Group Mappers (DGHS: National Rabies Control Program) • Dhaka, Bangladesh</small>
+                        </div>
+                        <small class="text-white-75">Feb 2019 – Jun 2021 | Full-time</small>
+                    </div>
+                    <div id="exp3" class="collapse">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li>Delivered nationwide GIS/RS training to 150+ participants, improving field data accuracy by 30% and strengthening rabies surveillance.</li>
+                                <li>Developed and managed Kobo Collect-based mobile data systems and GIS servers, enabling real-time tracking of 700+ field reports for national health programs.</li>
+                                <li>Generated disease-risk and health facility maps to support policy decisions and accelerate outbreak response planning.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. GIS Business Development Executive -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content card border-0 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-gradient-primary text-white p-3" 
+                         data-bs-toggle="collapse" data-bs-target="#exp4" aria-expanded="false">
+                        <div>
+                            <h5 class="mb-0">GIS Business Development Executive</h5>
+                            <small>Shahriar GIS School • Dhaka, Bangladesh</small>
+                        </div>
+                        <small class="text-white-75">May 2019 – Aug 2024 | Part-time</small>
+                    </div>
+                    <div id="exp4" class="collapse">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li>Managed online workshops, website updates, social media campaigns, and promotional design, increasing course enrollment by 50%.</li>
+                                <li>Coordinated ambassador programs and built strategic partnerships to expand training reach and visibility in the GIS education sector.</li>
+                                <li>Analyzed marketing and social media performance data to optimize strategies, boosting engagement and conversions by 40%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Technical Consultant -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content card border-0 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-gradient-primary text-white p-3" 
+                         data-bs-toggle="collapse" data-bs-target="#exp5" aria-expanded="false">
+                        <div>
+                            <h5 class="mb-0">Technical Consultant</h5>
+                            <small>Centre for Environmental and Geographic Information Services (CEGIS) • Dhaka, Bangladesh</small>
+                        </div>
+                        <small class="text-white-75">Mar 2021 – Apr 2021 | Full-time</small>
+                    </div>
+                    <div id="exp5" class="collapse">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li>Managed map procurement for the National Population Census 2022.</li>
+                                <li>Reviewed, processed, and converted maps into required digital formats.</li>
+                                <li>Performed georeferencing to ensure spatial accuracy of census maps.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Executive Management Team Member -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content card border-0 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-gradient-primary text-white p-3" 
+                         data-bs-toggle="collapse" data-bs-target="#exp6" aria-expanded="false">
+                        <div>
+                            <h5 class="mb-0">Executive Management Team Member</h5>
+                            <small>Group Mappers • Dhaka, Bangladesh</small>
+                        </div>
+                        <small class="text-white-75">Aug 2020 – Oct 2020 | Part-time</small>
+                    </div>
+                    <div id="exp6" class="collapse">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li>Conducted data analysis, processing, and visualization for project deliverables.</li>
+                                <li>Developed implementation methodologies and coordinated with team members to meet project goals.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Research Assistant -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content card border-0 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-gradient-primary text-white p-3" 
+                         data-bs-toggle="collapse" data-bs-target="#exp7" aria-expanded="false">
+                        <div>
+                            <h5 class="mb-0">Research Assistant</h5>
+                            <small>Mohammad Abdul Quader Research Group • Dhaka, Bangladesh</small>
+                        </div>
+                        <small class="text-white-75">Jan 2019 – Feb 2021 | Full-time</small>
+                    </div>
+                    <div id="exp7" class="collapse">
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li>Delivered GIS and remote sensing analysis for multiple research projects over two years.</li>
+                                <li>Strengthened research outcomes by applying improved methodologies and quality data processing.</li>
+                                <li>Analyzed and visualized spatial and statistical data using Excel, SPSS, ArcGIS, QGIS, and ERDAS Imagine.</li>
+                                <li>Supported technical reporting and documentation for project deliverables.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="text-muted small">
+                Click on each position title to view full responsibilities and achievements
+            </p>
+        </div>
+    </div>
+</section>
+
+    
+
+
+
+
+
+
+<!-- Field Work & Training – National Rabies Control Program -->
+<section id="fieldwork" class="section bg-white">
+    <div class="container">
+        <h2 class="section-title text-center">Field Work & Training – National Rabies Control Program</h2>
+        <p class="text-center lead mb-5">
+            Engaging directly with village communities across Bangladesh — listening to their lifestyles, 
+            understanding local challenges, and training field staff on accurate data collection for effective rabies surveillance.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+
+                <!-- Large highlighted main image with overlay text -->
+                <div class="main-image-wrapper mb-4 shadow-lg rounded overflow-hidden position-relative">
+                    <img src="National Rabies Control Program/National Rabies Control Program (1).jpg"
+                         alt="Community engagement and training session in rural upazila – group discussion with villagers"
+                         class="img-fluid w-100">
+                    <div class="image-overlay">
+                        <p class="overlay-text">
+                            Engaging with village communities, understanding their daily life and challenges, 
+                            and conducting hands-on training for rabies data collection and surveillance
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Horizontal scrollable smaller images – supporting moments -->
+                <div class="gallery-scroll-wrapper mt-3">
+                    <div class="gallery-scroll d-flex flex-nowrap overflow-auto pb-3 gap-3">
+
+                        <!-- Image 2 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (2).jpg"
+                                 alt="Group discussion with villagers and field staff"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 3 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (3).jpg"
+                                 alt="Participants actively listening during training session"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 4 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (4).jpg"
+                                 alt="Hands-on training on mobile data collection tools"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 5 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (5).jpg"
+                                 alt="Community members participating in group discussion"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 6 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (6).jpg"
+                                 alt="Field team conducting awareness and training activity"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 7 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (7).jpg"
+                                 alt="Training session in rural setting with community"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 8 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (8).jpg"
+                                 alt="Demonstration of real-time data submission process"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 9 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (9).jpg"
+                                 alt="Rabies awareness discussion with villagers"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 10 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (10).jpg"
+                                 alt="Field officers and community members after training"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 11 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (11).jpg"
+                                 alt="Upazila-level training and engagement session"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 12 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (12).jpg"
+                                 alt="Practical session on rabies case reporting"
+                                 class="gallery-img small">
+                        </div>
+
+                        <!-- Image 13 -->
+                        <div class="gallery-item flex-shrink-0">
+                            <img src="National Rabies Control Program/National Rabies Control Program (13).jpg"
+                                 alt="Group photo of participants during training"
+                                 class="gallery-img small">
+                        </div>
+
+                    </div>
+                </div>
+
+                <p class="text-center mt-4 text-muted fst-italic">
+                    Scroll left or right to see more moments from community engagement, lifestyle discussions, 
+                    and hands-on training sessions conducted across various upazilas in Bangladesh.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Modal (lightbox popup) -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-dark border-0">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title text-white" id="imageModalLabel">Training Photo</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-3">
+                <img id="modalImage" src="" alt="Enlarged training photo" class="img-fluid rounded" style="max-height: 82vh;">
+            </div>
+            <div class="modal-footer border-0 pt-0 justify-content-center">
+                <small id="modalCaption" class="text-white-75"></small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- Education -->
+<section id="education" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Education</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        M.Sc. Geography & Environment
+                    </div>
+                    <div class="card-body">
+                        <strong>Jagannath University, Dhaka, Bangladesh</strong><br>
+                        CGPA 3.57/4.00 | 2019 – 2020<br>
+                        Applied GIS, Remote Sensing, Digital Image Processing
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        B.Sc. Geography & Environment
+                    </div>
+                    <div class="card-body">
+                        <strong>Jagannath University, Dhaka, Bangladesh</strong><br>
+                        CGPA 3.36/4.00 | 2016 – 2019<br>
+                        GIS Fundamentals, Cartography, Geospatial Analysis
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Publications -->
+<section id="publications" class="section">
+    <div class="container">
+        <h2 class="section-title text-center">Publications</h2>
+        <p class="text-center text-muted mb-5">
+            Peer-reviewed papers, conference presentations, and ongoing research
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+
+                <!-- 1. Conference Poster with preview -->
+                <div class="card mb-4 shadow-sm border-0 overflow-hidden">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center g-4">
+                            <!-- Poster thumbnail -->
+                            <div class="col-md-4 col-12">
+                                <div class="poster-preview rounded overflow-hidden shadow">
+                                    <img src="GIS and RS_Experience_Collage/Poster_JNINC2022.jpg"
+                                         alt="Poster: Land Use-Land Cover and Change Detection – JNINC 2022"
+                                         class="img-fluid w-100"
+                                         style="height: 280px; object-fit: cover; object-position: top;">
+                                </div>
+                            </div>
+                
+                            <!-- Text + modal button -->
+                            <div class="col-md-8 col-12">
+                                <h5 class="fw-bold mb-2">
+                                    Tushar et al. (2022)
+                                </h5>
+                                <p class="mb-3">
+                                    Land Use-Land Cover and Change Detection post-classification of Dhaka City Corporation Area (1972–2020).<br>
+                                    <em>Jamal Nazrul Islam National Conference 2022, Chittagong, Bangladesh</em>
+                                </p>
+                
+                                <button type="button" 
+                                        class="btn btn-outline-primary btn-sm"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#jnincPosterModal">
+                                    <i class="fas fa-expand me-2"></i> View Conference Poster
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Published Paper -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <strong>Quader et al. (2022).</strong> Factors of land cover change of Dhaka city through geospatial techniques. 
+                        <em>Earth Systems and Environment</em>, 5(3), 105–119.
+                    </div>
+                </div>
+
+                <!-- 3. In Progress -->
+                <div class="card">
+                    <div class="card-body">
+                        <strong>Tushar et al.</strong> Disaster risk reduction through mangrove management: A case study of Sundarbans and surroundings. 
+                        <em>Jagannath University Journal of Life and Earth Sciences</em>. (In progress)
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Story Maps & Dashboards -->
+<section id="storymaps" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Interactive Story Maps & Dashboards</h2>
+        <p class="text-center lead mb-5">Explore geospatial narratives, urban analysis, environmental stories, network visualizations, and mapping workflows</p>
+
+        <!-- Horizontal scrollable maps carousel -->
+        <div class="video-carousel-wrapper mt-4">
+            <div class="video-carousel d-flex flex-nowrap overflow-auto pb-4 gap-4">
+
+
+
+
+                <!-- Dashboard 1 -->
+                <div class="video-card flex-shrink-0" style="width: 520px;">
+                    <div class="ratio ratio-4x3 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.google.com/maps/d/embed?mid=1UBEDo2ro5962kqDBcA-Gt04QEoyqMHQ"
+                            title="Service Areas Dashboard"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Service Areas Dashboard</h5>
+                </div>
+
+                
+
+                <!-- Dashboard 2 -->
+                <div class="video-card flex-shrink-0" style="width: 520px;">
+                    <div class="ratio ratio-4x3 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.google.com/maps/d/embed?mid=14LD9gkOogZckDv1x3KJfxYljr32y0zBC"
+                            title="Worldwide Projections"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Worldwide Projections</h5>
+                </div>
+
+                <!-- Dashboard 3 -->
+                <div class="video-card flex-shrink-0" style="width: 520px;">
+                    <div class="ratio ratio-4x3 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.google.com/maps/d/u/0/embed?mid=1UBEDo2ro5962kqDBcA-Gt04QEoyqMHQ"
+                            title="Wireless Network Map"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Wireless Network Map</h5>
+                </div>
+
+                <!-- Dashboard 4 -->
+                <div class="video-card flex-shrink-0" style="width: 520px;">
+                    <div class="ratio ratio-4x3 rounded shadow mb-3">
+                        <iframe 
+                            src="https://www.google.com/maps/d/embed?mid=1M7sk43MPvmi5avNPdH8W-_-3-7hBUvc"
+                            title="Layout & Print Dashboard Mouza Mapping"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Layout & Print Dashboard Mouza Mapping</h5>
+                </div>
+
+                <!-- You can add more maps/dashboards here by copying the block above -->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<!-- Professional Activities & Contributions -->
+<section id="activities" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Professional Activities & Contributions</h2>
+        <div class="card">
+            <div class="card-body">
+                <ul class="list-unstyled mb-4">
+                    <li><strong>GIS Trainer</strong> – Geoinformatics Earth Observation Research Center (<a href="https://youtube.com/@georc" target="_blank">https://youtube.com/@georc</a>)<br>practical GIS and Remote Sensing video tutorials</li>
+                </ul>
+                <h5 class="mt-4 mb-3">Volunteering & Community Mapping</h5>
+                <ul class="list-unstyled">
+                    <li><strong>Group Mappers</strong> — Participated in crowdsourced GIS mapping projects (COVID-19 tracking, Dengue risk mapping)</li>
+                    <li><strong>Green Voice</strong> — Supported river conservation activities through geospatial data and mapping</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trainings & Certifications -->
+<section id="trainings" class="section">
+    <div class="container">
+        <h2 class="section-title text-center">Trainings & Certifications</h2>
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        Cadastral Map Digitizing Using ArcGIS – GEOMARK LIMITED (Sep 2022)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        Introduction to NASA’s "Black Marble" Night Lights Data – NASA (Dec 2020)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        Web GIS and Web Mapping: Basics of Open Source Platforms – Udemy (Nov 2019)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        The Crossroad of Exploring Geospatial Science – MORU (Aug 2022)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        GIS for Beginners: Introduction to GIS – GroupMappers (May 2019)
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        GIS Software Technology Conference 2020 – SuperMap GIS (Oct 2020)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Achievements & Awards -->
+<section id="awards" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Achievements & Awards</h2>
+        <p class="text-center lead mb-5">
+            Recognition for outstanding performance in GIS training and professional development
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow-lg border-0 overflow-hidden">
+                    <!-- Award photos side-by-side -->
+                    <div class="row g-0">
+                        <!-- Left: Receiving certificate photo -->
+                        <div class="col-md-6">
+                            <img src="GIS and RS_Experience_Collage/Introduction to GIS_1st_Prize.jpg" 
+                                 alt="Receiving 1st Prize certificate from trainer"
+                                 class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                        <!-- Right: Close-up of certificate & prize -->
+                        <div class="col-md-6">
+                            <img src="GIS and RS_Experience_Collage/Introduction to GIS_1st_Prize_V2.jfif" 
+                                 alt="1st Position Certificate, USB drive, and plaque"
+                                 class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="card-body text-center p-4 p-md-5">
+                        <h4 class="card-title mb-3 text-primary fw-bold">
+                            1st Position – Outstanding Performance
+                        </h4>
+                        <h5 class="mb-3">
+                            GIS For Beginners: Introduction to GIS (24 Credit Hour Training Course)
+                        </h5>
+                        <p class="text-muted mb-3">
+                            Organized by Group Mappers & MORU (Mahidol-Oxford Research Unit), Bangkok, Thailand<br>
+                            Supported by Wellcome Trust, UK & International Centre for Diarrhoeal Disease Research, Bangladesh (icddr,b)<br>
+                            Date: April 19 – May 4, 2019 | Venue: Dhaka, Bangladesh
+                        </p>
+                        <p class="lead fw-bold text-dark mb-0">
+                            Awarded for exceptional performance and dedication
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!-- Mapbook Section -->
+<section id="mapbook" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Mapbook Collection</h2>
+        <p class="text-center lead mb-5">
+            A curated selection of cartographic works and geospatial atlases showcasing population demographics, 
+            regional geography, topographic boundaries, and key landmarks.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Mapbook 1 -->
+            <div class="col-lg-6 col-md-10">
+                <div class="card shadow-lg border-0 h-100 overflow-hidden">
+                    <div class="pdf-preview-wrapper">
+                        <iframe src="https://drive.google.com/file/d/1R_3UlpmWQoLJYE8LIJ75q_l2b8n18MvR/preview"
+                                width="100%" 
+                                height="600" 
+                                style="border: none;"
+                                allowfullscreen 
+                                loading="lazy"></iframe>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h4 class="card-title mb-3">World Atlas: A Visual Exploration of World Population Demographics</h4>
+                        <p class="text-muted mb-4">
+                            Global population insights through thematic maps, density visualizations, and demographic patterns.
+                        </p>
+                        <a href="https://drive.google.com/uc?export=download&id=1R_3UlpmWQoLJYE8LIJ75q_l2b8n18MvR" 
+                           class="btn btn-download btn-lg" 
+                           download>
+                            <i class="fas fa-file-pdf me-2"></i> Download World Atlas (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mapbook 2 -->
+            <div class="col-lg-6 col-md-10">
+                <div class="card shadow-lg border-0 h-100 overflow-hidden">
+                    <div class="pdf-preview-wrapper">
+                        <iframe src="https://drive.google.com/file/d/1rLTmgfyKYo-NYO4wIlyYds2jhFoVAJi9/preview"
+                                width="100%" 
+                                height="600" 
+                                style="border: none;"
+                                allowfullscreen 
+                                loading="lazy"></iframe>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h4 class="card-title mb-3">Bangladesh Regional Geoatlas: Mapping Topographic Boundaries and Landmarks</h4>
+                        <p class="text-muted mb-4">
+                            Detailed regional atlas featuring topographic features, administrative boundaries, and key landmarks of Bangladesh.
+                        </p>
+                        <a href="https://drive.google.com/uc?export=download&id=1CnldqukxHujlvVzyc3i8VNjW5d_xCU4Z" 
+                           class="btn btn-download btn-lg" 
+                           download>
+                            <i class="fas fa-file-pdf me-2"></i> Download Bangladesh Geoatlas (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5 text-muted small">
+            <p>PDF previews are powered by Google Drive • Best viewed on desktop • Download for full-resolution experience</p>
+        </div>
+    </div>
+</section>
+
+
+
+    
+
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="container">
+        <p class="mb-4">© 2026 Mohammad Jahidul Islam Tushar. All rights reserved.</p>
+        <div class="mb-4">
+            <a href="https://www.linkedin.com/in/jahid-tushar1996" class="mx-4 fs-3"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:jahidhtushar448@gmail.com" class="mx-4 fs-3"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    // Section fade-in animation
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+
+
+
+    
+
+    // ────────────────────────────────────────────────
+    // NEW: Dynamic modal content for featured projects
+document.addEventListener('DOMContentLoaded', function () {
+    const projectModal = document.getElementById('projectModal');
+    if (projectModal) {
+        projectModal.addEventListener('show.bs.modal', function (event) {
+            const card = event.relatedTarget;
+            const imgSrc = card.getAttribute('data-img');
+            const title = card.getAttribute('data-title');
+            const desc = card.getAttribute('data-desc');
+            
+            const modalImg = projectModal.querySelector('#modalImage');
+            const modalTitle = projectModal.querySelector('#modalTitle');
+            const modalDesc = projectModal.querySelector('#modalDesc');
+            
+            modalImg.src = imgSrc;
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
+        });
+    }
+});
+    // ────────────────────────────────────────────────
+    const featuredHeading = document.querySelector('.featured-heading');
+
+    if (featuredHeading) {
+        const headingObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const lines = featuredHeading.querySelectorAll('.featured-line');
+                    lines.forEach((line, index) => {
+                        setTimeout(() => {
+                            line.classList.add('animate');
+                        }, index * 300);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        headingObserver.observe(featuredHeading);
+    }
+
+
+
+
+// Gallery modal - fill image and caption when opening
+document.addEventListener('DOMContentLoaded', function () {
+    const imageModal = document.getElementById('imageModal');
+    if (imageModal) {
+        imageModal.addEventListener('show.bs.modal', function (event) {
+            const trigger = event.relatedTarget;
+            const src = trigger.getAttribute('data-img-src');
+            const caption = trigger.getAttribute('data-caption');
+
+            document.getElementById('modalImage').src = src;
+            document.getElementById('modalCaption').textContent = caption || '';
+            document.getElementById('imageModalLabel').textContent = caption || 'Field Training Photo';
+        });
+    }
+});
+
+
+
+
+
+
+// Hero background slideshow
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.hero-slideshow .slide');
+    if (slides.length <= 1) return; // no need if only one image
+
+    let current = 0;
+    slides[0].classList.add('active');
+
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, 6000); // change every 6 seconds
+});
+
+
+    
+  window.addEventListener('scroll', () => {
+    document.body.classList.toggle('scrolled', window.scrollY > 300);
+});  
+
+</script>
+
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Project Image" class="img-fluid mb-4" style="max-height: 70vh; object-fit: contain;">
+                <h4 id="modalTitle" class="mb-3"></h4>
+                <p id="modalDesc" class="lead text-muted"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Modal for JNINC 2022 Poster -->
+<div class="modal fade" id="jnincPosterModal" tabindex="-1" aria-labelledby="jnincPosterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header bg-light border-0">
+                <h5 class="modal-title fw-bold" id="jnincPosterModalLabel">
+                    Conference Poster – Jamal Nazrul Islam National Conference 2022
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-0">
+                <img src="GIS and RS_Experience_Collage/Poster_JNINC2022.jpg"
+                     alt="Poster: Land Use-Land Cover and Change Detection post-classification of Dhaka City Corporation Area (1972–2020)"
+                     class="img-fluid w-100 rounded-bottom"
+                     style="max-height: 85vh; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+</body>
+
+
+
+    <!-- WhatsApp Floating Button -->
+<a href="https://api.whatsapp.com/send?phone=8801521108306" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   title="Chat with me on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
