@@ -2429,86 +2429,176 @@
             Dive into my latest explorations in geospatial mapping, data visualization, and GIS innovations. Updated regularly with new projects, tutorials, and insights.
         </p>
         <div class="row g-4 justify-content-center">
-            <!-- Blog Post 1: Sample Post -->
+            <!-- Blog Post: COVID-19 Scenario Comparison -->
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                    <img src="blog-assets/sample-map-image.jpg" alt="Sample Map Visualization" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <img src="GIS and RS_Experience_Collage/COVID19.jpg" 
+                         alt="COVID-19 Global vs Bangladesh Map Visualization" 
+                         class="card-img-top" 
+                         style="height: 220px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Urban Heat Islands in Dhaka: A Spatial Analysis</h5>
-                        <small class="text-muted mb-3">Posted on: February 10, 2026</small>
+                        <h5 class="card-title fw-bold">COVID-19 Scenario of Bangladesh Compared to the World (April 2020 Snapshot)</h5>
+                        <small class="text-muted mb-3">Posted on: February 15, 2026</small>
                         <p class="card-text flex-grow-1">
-                            Exploring temperature variations using Landsat imagery and NDVI. Key findings on urban expansion's impact...
+                            A comprehensive geospatial visualization comparing the global spread of COVID-19 with the situation in Bangladesh and Dhaka City during the early pandemic phase. One of my earliest major crowdsourced mapping efforts with GroupMappers.
                         </p>
-                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="collapse" data-bs-target="#blogPost1" aria-expanded="false" aria-controls="blogPost1">
-                            Read More
+                        <button class="btn btn-outline-primary mt-auto" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#blogPostCovid2020" 
+                                aria-expanded="false" 
+                                aria-controls="blogPostCovid2020">
+                            Read the Full Story
                         </button>
                     </div>
+            
                     <!-- Collapsible Full Content -->
-                    <div id="blogPost1" class="collapse card-footer bg-light border-top-0 p-4">
+                    <div id="blogPostCovid2020" class="collapse card-footer bg-light border-top-0 p-4">
+                        <h6 class="mb-3">Project Background</h6>
                         <p>
-                            In this analysis, I used remote sensing data to map urban heat islands in Dhaka. Here's a key visualization:
+                            In April 2020, as the world grappled with the accelerating spread of SARS-CoV-2, I collaborated with <strong>GroupMappers</strong> — a crowdsourcing initiative — and <strong>MORU Tropical Health Network</strong> to create timely, visually impactful geospatial communication tools.
                         </p>
-                        <!-- Image Embed (Upload to blog-assets/ folder) -->
-                        <img src="blog-assets/urban-heat-map.png" alt="Urban Heat Island Map" class="img-fluid mb-3 rounded shadow">
-                        
-                        <!-- Video Embed (YouTube example) -->
-                        <div class="ratio ratio-16x9 mb-3">
-                            <iframe src="https://www.youtube.com/embed/sample-video-id" title="Mapping Tutorial Video" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        
-                        <!-- HTML Embed (e.g., an interactive map from Mapbox or ArcGIS) -->
-                        <div class="mb-3">
-                            <h6>Interactive Heat Map</h6>
-                            <iframe width="100%" height="300" src="https://api.mapbox.com/styles/v1/your-mapbox-style.html?access_token=your-token" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        
-                        <!-- Graph/Chart Embed (Using Chart.js - Add library below) -->
-                        <div class="mb-3">
-                            <h6>Temperature Trends Chart</h6>
-                            <canvas id="sampleChart1" height="200"></canvas>
-                        </div>
-                        
-                        <!-- Any Other Content (e.g., Code Snippet) -->
-                        <pre class="bg-dark text-white p-3 rounded"><code># Sample Python code for NDVI calculation
-import rasterio
-with rasterio.open('landsat.tif') as src:
-    nir = src.read(5)
-    red = src.read(4)
-    ndvi = (nir - red) / (nir + red)</code></pre>
-                        
-                        <p class="mt-3">
-                            Conclusion: Urban areas show 5-10°C higher temperatures. Stay tuned for more!
+                        <p>
+                            This map was designed to help both the general public and decision-makers quickly understand:
                         </p>
+                        <ul>
+                            <li>How Bangladesh's case numbers compared globally</li>
+                            <li>The spatial distribution of confirmed cases within Bangladesh</li>
+                            <li>The intense concentration of cases in Dhaka City</li>
+                        </ul>
+            
+                        <h6 class="mt-4 mb-3">Key Design Choices & Cartographic Features</h6>
+                        <ul>
+                            <li><strong>Proportional symbol map</strong> using graduated yellow-to-red circles to represent confirmed case counts worldwide</li>
+                            <li><strong>Focused inset maps</strong> for Europe, Dhaka City, and Bangladesh administrative units</li>
+                            <li><strong>Color-blind friendly classification</strong> with clear size hierarchy</li>
+                            <li><strong>Contextual comparison boxes</strong> showing total global cases, deaths, recoveries, and top affected countries</li>
+                            <li><strong>Timeline reference</strong>: Last updated April 21, 2020, 16:46 GMT</li>
+                            <li><strong>Strong call-to-action messaging</strong>: “Stay Home! Stay Safe!”</li>
+                        </ul>
+            
+                        <div class="text-center my-4">
+                            <img src="GIS and RS_Experience_Collage/COVID19.jpg" 
+                                 alt="Full COVID-19 Comparative Map - Bangladesh vs World" 
+                                 class="img-fluid rounded shadow-lg" 
+                                 style="max-height: 70vh; width: 100%; object-fit: contain;">
+                            <p class="text-muted mt-2 small">Full map view (April 2020 snapshot)</p>
+                        </div>
+            
+                        <h6 class="mt-4 mb-3">Data Sources</h6>
+                        <ul>
+                            <li>Global & national statistics: <strong>Worldometer</strong></li>
+                            <li>Bangladesh & Dhaka City spatial data: <strong>IEDCR</strong> (Institute of Epidemiology, Disease Control and Research)</li>
+                            <li>Base map & administrative boundaries: OpenStreetMap / Natural Earth</li>
+                        </ul>
+            
+                        <h6 class="mt-4 mb-3">Impact & Reflection</h6>
+                        <p>
+                            This visualization was widely shared during the early pandemic in Bangladesh. It helped communicate scale — showing that while the global situation was alarming, Bangladesh was still in a relatively early stage — but also highlighted the rapid urban concentration in Dhaka.
+                        </p>
+                        <p class="fst-italic">
+                            Looking back in 2026, this map serves as both a historical record of an unprecedented global event and a reminder of how powerful clear, thoughtful geospatial storytelling can be during a crisis.
+                        </p>
+            
+                        <div class="mt-4">
+                            <p class="mb-2 fw-bold">Tools used:</p>
+                            <p class="mb-1">• ArcGIS Desktop / ArcMap</p>
+                            <p class="mb-1">• Adobe Illustrator (for layout polishing & typography)</p>
+                            <p class="mb-0">• Manual data compilation & cleaning in Excel</p>
+                        </div>
+            
+                        <div class="alert alert-info mt-4 small">
+                            <strong>Note:</strong> This is a preserved snapshot from April 2020. Numbers and situation have evolved significantly since then.
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Blog Post 2: Another Sample (Duplicate and customize for new posts) -->
+            <!-- Blog Post: The Spark of Demographics - Population Mapping -->
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 shadow-sm border-0 overflow-hidden">
-                    <img src="blog-assets/sample-viz-image.jpg" alt="Sample Visualization" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <img src="GIS and RS_Experience_Collage/The Spark of Demographics.jpg" 
+                         alt="Population Distribution Map of Bangladesh" 
+                         class="card-img-top" 
+                         style="height: 220px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Visualizing Flood Risk with 3D Terrain Models</h5>
-                        <small class="text-muted mb-3">Posted on: January 15, 2026</small>
+                        <h5 class="card-title fw-bold">The Spark of Demographics: Mapping Population Trends in Bangladesh</h5>
+                        <small class="text-muted mb-3">Posted on: February 20, 2026</small>
                         <p class="card-text flex-grow-1">
-                            Using DEM data in ArcGIS Pro to create interactive 3D flood simulations...
+                            A visually striking population density map of Bangladesh using 2022 BBS data, highlighting extreme urban concentration around Dhaka and the contrast between densely populated riverine areas and relatively sparse regions.
                         </p>
-                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="collapse" data-bs-target="#blogPost2" aria-expanded="false" aria-controls="blogPost2">
-                            Read More
+                        <button class="btn btn-outline-primary mt-auto" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#blogPostDemographics" 
+                                aria-expanded="false" 
+                                aria-controls="blogPostDemographics">
+                            Read the Full Story
                         </button>
                     </div>
+            
                     <!-- Collapsible Full Content -->
-                    <div id="blogPost2" class="collapse card-footer bg-light border-top-0 p-4">
-                        <p>Detailed walkthrough with embedded 3D model and charts.</p>
-                        <!-- Add your embeds here similar to above -->
+                    <div id="blogPostDemographics" class="collapse card-footer bg-light border-top-0 p-4">
+                        <h6 class="mb-3">Project Overview</h6>
+                        <p>
+                            This map visualizes Bangladesh's population distribution at the union/upazila level using data from the Bangladesh Bureau of Statistics (BBS 2022). The goal was to create an intuitive, dramatic representation that immediately communicates:
+                        </p>
+                        <ul>
+                            <li>The overwhelming dominance of Dhaka as the population epicenter</li>
+                            <li>The high population density along major river corridors</li>
+                            <li>The contrast between densely populated eastern and central regions vs. sparser northern and southeastern areas</li>
+                        </ul>
+            
+                        <h6 class="mt-4 mb-3">Cartographic Design Highlights</h6>
+                        <ul>
+                            <li><strong>Proportional symbol mapping</strong> with red glowing circles sized by population range</li>
+                            <li>Five-class graduated symbology with clear population breaks</li>
+                            <li>Dark background + glowing red points to create a “spark / heat” effect</li>
+                            <li>Strong visual hierarchy: Dhaka stands out dramatically</li>
+                            <li>Rivers shown in light blue to emphasize physical geography influence</li>
+                            <li>Clean legend with population range labels and scale bar</li>
+                            <li>Artistic title treatment: “The Spark of Demographics”</li>
+                        </ul>
+            
+                        <div class="text-center my-4">
+                            <img src="GIS and RS_Experience_Collage/The Spark of Demographics.jpg" 
+                                 alt="Population Density Map - Bangladesh 2022" 
+                                 class="img-fluid rounded shadow-lg" 
+                                 style="max-height: 70vh; width: 100%; object-fit: contain;">
+                            <p class="text-muted mt-2 small">Full population distribution map – BBS 2022 data</p>
+                        </div>
+            
+                        <h6 class="mt-4 mb-3">Data Source</h6>
+                        <ul>
+                            <li>Population figures: <strong>Bangladesh Bureau of Statistics (BBS) – 2022 Census</strong></li>
+                            <li>Administrative boundaries: Bangladesh administrative units (union/upazila level)</li>
+                            <li>Base map & hydrology: Esri, HERE, Garmin, FAO, NOAA, USGS</li>
+                        </ul>
+            
+                        <h6 class="mt-4 mb-3">Key Observations from the Map</h6>
+                        <ul>
+                            <li>Dhaka division shows extreme concentration — the largest circle is dramatically bigger than others</li>
+                            <li>High population clusters along the major river systems (Padma, Meghna, Jamuna)</li>
+                            <li>Chittagong and Sylhet divisions show secondary but still significant clusters</li>
+                            <li>Northern districts (Rangpur, Dinajpur) and parts of Barisal show comparatively lower densities</li>
+                        </ul>
+            
+                        <h6 class="mt-4 mb-3">Tools & Workflow</h6>
+                        <div class="mt-3">
+                            <p class="mb-2 fw-bold">Main software stack:</p>
+                            <p class="mb-1">• ArcGIS Pro / ArcMap – data processing & symbology</p>
+                            <p class="mb-1">• Adobe Illustrator – final layout, title design, legend polishing</p>
+                            <p class="mb-1">• Excel / Google Sheets – data cleaning & classification</p>
+                        </div>
+            
+                        <div class="alert alert-info mt-4 small">
+                            <strong>Insight:</strong> This map style (dark + glowing points) has proven very effective for social media sharing and public presentations — the visual “spark” effect draws attention immediately.
+                        </div>
+            
+                        <p class="mt-4 fst-italic text-center">
+                            “In a country of 170 million people living in just 147,570 km², population mapping is not just cartography — it is storytelling.”
+                        </p>
                     </div>
                 </div>
             </div>
-            
-            <!-- Add more posts by duplicating the above col-lg-4 block -->
-        </div>
-    </div>
-</section>
 
 
 
@@ -2718,6 +2808,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </a>
 
 </html>
+
 
 
 
