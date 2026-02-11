@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for Graphs/Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <style>
         :root {
             --primary: #006ba6;
@@ -930,6 +933,7 @@
                 <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
                 <li class="nav-item"><a class="nav-link" href="#trainings">Trainings</a></li>
                 <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="#geoviz-blog">GeoViz Blog</a></li>
             </ul>
         </div>
     </div>
@@ -2096,6 +2100,26 @@
                     <h5 class="text-center mb-0">Service Areas Dashboard</h5>
                 </div>
 
+
+
+
+
+                                                <!-- Dhaka Division Districts & Upazilas Explorer -->
+                <div class="video-card flex-shrink-0" style="width: 520px;">
+                    <div class="ratio ratio-4x3 rounded shadow mb-3">
+                        <iframe
+                            width="100%"
+                            height="400px"
+                            src="https://jahid-tushar.github.io/Election2026_Dhaka/"
+                            title="Election2026_Dhaka"
+                            frameborder="0"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <h5 class="text-center mb-0">Election2026_Dhaka</h5>
+                </div>
+
                 
 
                 <!-- Dashboard 2 -->
@@ -2178,21 +2202,7 @@
 
 
 
-                                <!-- Dhaka Division Districts & Upazilas Explorer -->
-                <div class="video-card flex-shrink-0" style="width: 520px;">
-                    <div class="ratio ratio-4x3 rounded shadow mb-3">
-                        <iframe
-                            width="100%"
-                            height="400px"
-                            src="https://jahid-tushar.github.io/Election2026_Dhaka/"
-                            title="Election2026_Dhaka"
-                            frameborder="0"
-                            allowfullscreen
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    <h5 class="text-center mb-0">Election2026_Dhaka</h5>
-                </div>
+
 
                 <!-- You can add more maps/dashboards here by copying the block above -->
 
@@ -2409,6 +2419,99 @@
 
 
 
+
+
+    <!-- GeoViz Blog Section -->
+<section id="geoviz-blog" class="section bg-white">
+    <div class="container">
+        <h2 class="section-title text-center">GeoViz Chronicles: Mapping Insights & Visual Stories</h2>
+        <p class="text-center lead mb-5">
+            Dive into my latest explorations in geospatial mapping, data visualization, and GIS innovations. Updated regularly with new projects, tutorials, and insights.
+        </p>
+        <div class="row g-4 justify-content-center">
+            <!-- Blog Post 1: Sample Post -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="blog-assets/sample-map-image.jpg" alt="Sample Map Visualization" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Urban Heat Islands in Dhaka: A Spatial Analysis</h5>
+                        <small class="text-muted mb-3">Posted on: February 10, 2026</small>
+                        <p class="card-text flex-grow-1">
+                            Exploring temperature variations using Landsat imagery and NDVI. Key findings on urban expansion's impact...
+                        </p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="collapse" data-bs-target="#blogPost1" aria-expanded="false" aria-controls="blogPost1">
+                            Read More
+                        </button>
+                    </div>
+                    <!-- Collapsible Full Content -->
+                    <div id="blogPost1" class="collapse card-footer bg-light border-top-0 p-4">
+                        <p>
+                            In this analysis, I used remote sensing data to map urban heat islands in Dhaka. Here's a key visualization:
+                        </p>
+                        <!-- Image Embed (Upload to blog-assets/ folder) -->
+                        <img src="blog-assets/urban-heat-map.png" alt="Urban Heat Island Map" class="img-fluid mb-3 rounded shadow">
+                        
+                        <!-- Video Embed (YouTube example) -->
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe src="https://www.youtube.com/embed/sample-video-id" title="Mapping Tutorial Video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- HTML Embed (e.g., an interactive map from Mapbox or ArcGIS) -->
+                        <div class="mb-3">
+                            <h6>Interactive Heat Map</h6>
+                            <iframe width="100%" height="300" src="https://api.mapbox.com/styles/v1/your-mapbox-style.html?access_token=your-token" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Graph/Chart Embed (Using Chart.js - Add library below) -->
+                        <div class="mb-3">
+                            <h6>Temperature Trends Chart</h6>
+                            <canvas id="sampleChart1" height="200"></canvas>
+                        </div>
+                        
+                        <!-- Any Other Content (e.g., Code Snippet) -->
+                        <pre class="bg-dark text-white p-3 rounded"><code># Sample Python code for NDVI calculation
+import rasterio
+with rasterio.open('landsat.tif') as src:
+    nir = src.read(5)
+    red = src.read(4)
+    ndvi = (nir - red) / (nir + red)</code></pre>
+                        
+                        <p class="mt-3">
+                            Conclusion: Urban areas show 5-10°C higher temperatures. Stay tuned for more!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 2: Another Sample (Duplicate and customize for new posts) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                    <img src="blog-assets/sample-viz-image.jpg" alt="Sample Visualization" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Visualizing Flood Risk with 3D Terrain Models</h5>
+                        <small class="text-muted mb-3">Posted on: January 15, 2026</small>
+                        <p class="card-text flex-grow-1">
+                            Using DEM data in ArcGIS Pro to create interactive 3D flood simulations...
+                        </p>
+                        <button class="btn btn-outline-primary mt-auto" data-bs-toggle="collapse" data-bs-target="#blogPost2" aria-expanded="false" aria-controls="blogPost2">
+                            Read More
+                        </button>
+                    </div>
+                    <!-- Collapsible Full Content -->
+                    <div id="blogPost2" class="collapse card-footer bg-light border-top-0 p-4">
+                        <p>Detailed walkthrough with embedded 3D model and charts.</p>
+                        <!-- Add your embeds here similar to above -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more posts by duplicating the above col-lg-4 block -->
+        </div>
+    </div>
+</section>
+
+
+
     
 
 
@@ -2529,7 +2632,28 @@ document.addEventListener('DOMContentLoaded', function () {
     
   window.addEventListener('scroll', () => {
     document.body.classList.toggle('scrolled', window.scrollY > 300);
-});  
+}); 
+
+
+    // Sample Chart for Blog Post 1 (Add similar for other posts)
+document.addEventListener('DOMContentLoaded', function () {
+    const ctx1 = document.getElementById('sampleChart1');
+    if (ctx1) {
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['2010', '2015', '2020', '2025'],
+                datasets: [{
+                    label: 'Temperature (°C)',
+                    data: [28, 30, 32, 35],
+                    borderColor: 'var(--primary)',
+                    tension: 0.1
+                }]
+            },
+            options: { scales: { y: { beginAtZero: false } } }
+        });
+    }
+});
 
 </script>
 
@@ -2594,6 +2718,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </a>
 
 </html>
+
 
 
 
